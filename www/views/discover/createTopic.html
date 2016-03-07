@@ -1,0 +1,31 @@
+<ion-view cache-view="false" hide-nav-bar="true" hide-tabs>
+    <!-- <ion-view view-title="朋友圈" cache-view="false" > -->
+    <ion-header-bar>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="go('tab.discover-friends')">
+                <label class="dark">取消</label>
+            </button>
+        </div>
+        <p class="title">朋友圈</p>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="go('tab.discover-friends')">
+                <label class="dark">发送</label>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list ">
+            <label class="item item-input ">
+                <input type="text" placeholder="这一刻的想法" focus-me="true" ng-model="topicTitle" >
+            </label>
+            <div class="item item-thumbnail-left" ng-if="type=='image'">
+                <img src="img/mike.png" ng-src="{{img}}" alt="">
+            </div>
+            <div class="item" ng-if="type=='video'">
+                <video controls="controls" height="80px" width="80px">
+                    <source ng-src="{{videoPath}}" />
+                </video>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
